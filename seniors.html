@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Service d'accompagnement des aines : courses, promenade, lecture et demarches simples.">
+  <title>Marie Services - Accompagnement des aines</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Marie Services, retour a l'accueil">Marie Services</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span class="sr-only">Ouvrir le menu</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="babysitting.html">Baby-sitting</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="seniors.html">Aines</a>
+      <a href="cgu.html">CGU</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Service</p>
+        <h1>Accompagnement des aines</h1>
+        <p>Une aide humainé pour rompre l'isolement, accompagner les sorties simples et soulager le quotidien.</p>
+      </div>
+      <div class="profile-frame profile-frame-small" aria-label="Photo de profil">
+        <img src="/imgs/marie_pdp.jpeg" alt="Portrait de Marie Dupont" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <span class="profile-placeholder" aria-hidden="true">Photo</span>
+      </div>
+    </section>
+
+    <section class="two-column section">
+      <div class="content-panel">
+        <h2>Un soutien doux et non medical</h2>
+        <p>
+          J'accompagne les personnes agees pour des activites simples : courses, promenade, lecture, discussion ou aide aux demarches administratives courantes. La prestation reste centree sur la compagnie, l'organisation et l'assistance legere.
+        </p>
+        <div class="alert-box">
+          <strong>Exclusions :</strong> Ce service n'inclut aucun travail de menage lourd, ni aucun soin medical/infirmier.
+        </div>
+      </div>
+
+
+      <aside class="form-card action-panel" aria-labelledby="action-title">
+        <h2 id ="">Faire une demande</h2>
+        <p>Une seule demande suffit : indiquez le service souhaité, vos dates et vos besoins. Un récapitulatif PDF sera téléchargé automatiquement après l'envoi.</p>
+        <a class="btn btn-primary" href="index.html#demande-rapide">Allez au formulaire  :)</a>
+      </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Marie Services. Tous droits reserves.</p>
+    <a href="cgu.html">CGU & Mentions legales</a>
+  </footer>
+</body>
+</html>

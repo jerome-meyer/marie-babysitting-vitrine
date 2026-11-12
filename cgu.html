@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CGU et mentions légales de Marie Services.">
+  <title>Marie Services - CGU & Mentions légales</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Marie Services, retour à l'accueil">Marie Services</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span class="sr-only">Ouvrir le menu</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="babysitting.html">Baby-sitting</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="seniors.html">Aînés</a>
+      <a href="cgu.html">CGU</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Informations</p>
+        <h1>CGU & Mentions <span class="no-break">l<span class="accent-char">é</span>gales</span></h1>
+        <p>Informations utiles sur l'utilisation du site, les demandes envoyées et les limites des prestations proposées.</p>
+      </div>
+      <div class="profile-frame profile-frame-small" aria-label="Photo de profil">
+        <img src="imgs/marie_pdp.jpeg" alt="Portrait de Marie" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <span class="profile-placeholder" aria-hidden="true">Photo</span>
+      </div>
+    </section>
+
+    <section class="legal-content section">
+      <article>
+        <h2>Mentions <span class="no-break">l<span class="accent-char">é</span>gales</span></h2>
+        <p>
+          Le site Marie Services présente des services de baby-sitting, garde d'animaux et accompagnement non médical des aînés. Avant une mise en ligne publique, les informations professionnelles obligatoires devront être complétées avec des coordonnées dédiées à l'activité : identité professionnelle, moyen de contact professionnel et informations relatives à l'hébergeur. Il est recommandé de ne pas publier d'adresse personnelle dans les pages commerciales du site.
+        </p>
+      </article>
+      <article>
+        <h2>Conditions <span class="no-break">g<span class="accent-char">é</span>n<span class="accent-char">é</span>rales</span> d'utilisation</h2>
+        <p>
+          L'utilisation du site est libre et ne nécessite pas la création d'un compte. Les pages ont pour objectif de présenter les prestations et de permettre l'envoi d'une demande de contact. Les informations présentes sur le site peuvent être modifiées afin de corriger une erreur, préciser une prestation ou mettre à jour les disponibilités.
+        </p>
+      </article>
+      <article>
+        <h2><span class="no-break">Propri<span class="accent-char">é</span>t<span class="accent-char">é</span></span> intellectuelle</h2>
+        <p>
+          Les textes, images, éléments graphiques et contenus présents sur ce site sont destinés à la présentation de Marie Services. Toute reproduction ou réutilisation sans autorisation préalable est interdite, sauf mention contraire ou usage strictement personnel.
+        </p>
+      </article>
+      <article>
+        <h2>Traitement des <span class="no-break">donn<span class="accent-char">é</span>es</span> du formulaire</h2>
+        <p>
+          Le site ne propose pas de compte utilisateur et ne stocke pas de base de données locale. Lorsqu'un formulaire est envoyé, les informations saisies (nom, prénom, e-mail, téléphone facultatif, prestation demandée et message) sont transmises via le service technique d'envoi du formulaire afin de répondre à la demande. Elles ne doivent pas être utilisées pour autre chose que l'étude de la demande et les échanges nécessaires. Après l'envoi, un récapitulatif PDF est généré directement dans le navigateur à partir des informations saisies. Les personnes ayant envoyé une demande peuvent demander l'accès, la rectification ou la suppression de leurs informations via le moyen de contact professionnel indiqué sur le site.
+        </p>
+      </article>
+      <article>
+        <h2>Droit de <span class="no-break">r<span class="accent-char">é</span>serve</span></h2>
+        <p>
+          Chaque demande de prestation est étudiée avant acceptation. L'envoi du formulaire ne vaut pas validation automatique : la prestation est confirmée uniquement après échange avec Marie, par message ou par e-mail. Une demande peut être refusée si elle ne correspond pas aux compétences, aux restrictions indiquées, aux disponibilités ou aux conditions de sécurité nécessaires. Les services d'accompagnement des aînés ne comprennent aucun soin médical ou infirmier.
+        </p>
+      </article>
+      <article>
+        <h2>Retour sur le site</h2>
+        <p>
+          Les retours concernant le fonctionnement du site peuvent être envoyés à l'adresse retours-site@marie-services.fr. Cette adresse sert uniquement à signaler une erreur, un problème d'affichage ou une proposition d'amélioration du site.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Marie Services. Tous droits réservés.</p>
+    <div class="footer-links">
+      <button class="footer-link-button feedback-toggle" type="button">Retour site</button>
+      <a href="cgu.html">CGU & Mentions légales</a>
+    </div>
+  </footer>
+
+  <div class="feedback-popover" role="dialog" aria-modal="true" aria-labelledby="feedback-popover-title" hidden>
+    <div class="feedback-popover-panel">
+      <button class="feedback-close" type="button" aria-label="Fermer">×</button>
+      <h2 id="feedback-popover-title">Signaler un souci</h2>
+      <p>
+        Un souci peut être une faute, un lien cassé, un problème d'affichage, une information peu claire ou une amélioration à proposer.
+      </p>
+      <label>Adresse de contact
+        <input class="feedback-email" type="text" value="retours-site@marie-services.fr" readonly>
+      </label>
+      <button class="btn btn-primary copy-feedback-email" type="button">Copier l'adresse</button>
+      <p class="copy-status" role="status" aria-live="polite" hidden></p>
+    </div>
+  </div>
+</body>
+</html>

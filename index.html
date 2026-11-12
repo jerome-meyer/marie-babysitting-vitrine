@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Services de baby-sitting, garde d'animaux et accompagnement des aînés.">
+  <title>Marie Services - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Marie Services, retour à l'accueil">Marie Services</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span class="sr-only">Ouvrir le menu</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="babysitting.html">Baby-sitting</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="seniors.html">Aînés</a>
+      <a href="cgu.html">CGU</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-home">
+      <div class="hero-content">
+        <p class="eyebrow">Services à la personne</p>
+        <h1>Marie Services</h1>
+        <p class="hero-name">Marie S.</p>
+        <p class="hero-text">Une présence fiable, douce et attentive pour accompagner vos proches, vos enfants et vos animaux au quotidien.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#demande-rapide">Faire une demande</a>
+          <a class="btn btn-secondary" href="#services-title">Voir les services</a>
+          <a class="btn btn-secondary" href="cgu.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="profile-frame" aria-label="Emplacement photo de profil">
+        <img src="imgs/marie_pdp.jpeg" alt="Portrait de Marie" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <span class="profile-placeholder" aria-hidden="true">Photo</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Profil</p>
+        <h2>Une aide de confiance, <span class="no-break">adapt<span class="accent-char">é</span>e</span> <span class="accent-char">à</span> votre situation</h2>
+      </div>
+      <article class="intro-card">
+        <p>
+          Bonjour, je m'appelle Marie. Je propose des services simples, humains et organisés pour faciliter le quotidien des familles : garde d'enfants, visites pour animaux et accompagnement de personnes âgées. Chaque demande est étudiée avec soin afin de garantir une prestation sérieuse, réaliste et respectueuse de mes compétences.
+        </p>
+      </article>
+    </section>
+
+    <section class="section quick-request" aria-labelledby="quick-request-title" id="demande-rapide">
+      <div class="section-heading">
+        <p class="eyebrow">Demande rapide</p>
+        <h2 id="quick-request-title">Envoyer une demande en quelques minutes</h2>
+      </div>
+      <section class="form-card printable-request" aria-labelledby="quick-form-title">
+        <h2 id="quick-form-title">Votre demande</h2>
+        <form class="service-form" action="https://formspree.io/f/mredkryn" method="POST" data-service="Demande rapide">
+          <input type="hidden" name="_subject" value="Nouvelle demande - Marie Services">
+          <label class="honeypot-field" aria-hidden="true">Ne pas remplir ce champ
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+          <label>Service souhaité
+            <select name="service" required>
+              <option value="" disabled selected hidden>Sélectionnez un service</option>
+              <option>Baby-sitting</option>
+              <option>Garde d'animaux</option>
+              <option>Accompagnement des aînés</option>
+              <option>Autre / Demande personnalisée</option>
+            </select>
+          </label>
+          <div class="form-grid">
+            <label>Nom
+              <input type="text" name="nom" autocomplete="family-name" maxlength="80" required>
+            </label>
+            <label>Prénom
+              <input type="text" name="prenom" autocomplete="given-name" maxlength="80" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" maxlength="120" required>
+            </label>
+            <label>Téléphone (facultatif)
+              <input type="tel" name="telephone" autocomplete="tel" maxlength="30">
+            </label>
+          </div>
+          <fieldset class="schedule-fieldset">
+            <legend>Créneaux souhaités</legend>
+            <div class="schedule-list">
+              <div class="schedule-row">
+                <label>Date
+                  <input type="date" name="creneau_date[]" required>
+                </label>
+                <label>Début
+                  <input type="time" name="creneau_debut[]" required>
+                </label>
+                <label>Fin
+                  <input type="time" name="creneau_fin[]" required>
+                </label>
+                <label>Précision
+                  <input type="text" name="creneau_note[]" maxlength="140" placeholder="Ex. sortie d'école, visite, promenade...">
+                </label>
+                <button class="btn btn-small remove-schedule" type="button" hidden>Supprimer</button>
+              </div>
+            </div>
+            <button class="btn btn-secondary add-schedule" type="button">Ajouter un créneau</button>
+          </fieldset>
+
+          <div class="form-grid">
+            <label>Fréquence
+              <select name="frequence" required>
+                <option value="" disabled selected hidden>Sélectionnez une fréquence</option>
+                <option>Demande ponctuelle</option>
+                <option>Besoin régulier</option>
+                <option>À définir ensemble</option>
+              </select>
+            </label>
+            <label>Secteur / lieu général
+              <input type="text" name="secteur" maxlength="120" placeholder="Ville ou quartier, sans adresse complète" required>
+            </label>
+          </div>
+
+          <fieldset class="service-details" data-detail-panel="Baby-sitting" hidden disabled>
+            <legend>Précisions baby-sitting</legend>
+            <label>Type de demande
+              <select name="prestation_babysitting" data-custom-trigger>
+                <option value="" disabled selected hidden>Sélectionnez une prestation</option>
+                <option>Garde ponctuelle en soirée</option>
+                <option>Sortie d'école + aide aux devoirs</option>
+                <option>Garde le mercredi en journée</option>
+                <option>Autre / Demande particulière</option>
+              </select>
+            </label>
+            <div class="form-grid">
+              <label>Nombre d'enfants
+                <input type="number" name="nombre_enfants" min="1" max="6">
+              </label>
+              <label>Âge(s) des enfants
+                <input type="text" name="ages_enfants" maxlength="120" placeholder="Ex. 4 ans et 8 ans">
+              </label>
+            </div>
+            <label>Allergies, santé ou choses à savoir
+              <textarea name="consignes_enfants" rows="3" maxlength="700" placeholder="Allergies, traitement à connaître, routine du coucher, devoirs..."></textarea>
+            </label>
+            <label class="custom-detail" hidden>Demande personnalisée
+              <textarea name="details_babysitting" rows="4" maxlength="900" disabled></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="service-details" data-detail-panel="Garde d'animaux" hidden disabled>
+            <legend>Précisions garde d'animaux</legend>
+            <label>Type de demande
+              <select name="prestation_animaux" data-custom-trigger>
+                <option value="" disabled selected hidden>Sélectionnez une prestation</option>
+                <option>Visite à domicile (nourriture / litière)</option>
+                <option>Promenade de chien</option>
+                <option>Garde à la journée</option>
+                <option>Autre / Demande particulière</option>
+              </select>
+            </label>
+            <div class="form-grid">
+              <label>Animal concerné
+                <input type="text" name="animal_concerne" maxlength="120" placeholder="Ex. chat, chien, lapin...">
+              </label>
+              <label>Nombre d'animaux
+                <input type="number" name="nombre_animaux" min="1" max="8">
+              </label>
+              <label>Taille / tempérament du chien
+                <input type="text" name="taille_temperament_chien" maxlength="160" placeholder="Si chien : taille, énergie, comportement">
+              </label>
+              <label>Habitudes importantes
+                <input type="text" name="habitudes_animal" maxlength="180" placeholder="Repas, sortie, litière, peur, fugue...">
+              </label>
+            </div>
+            <label>Allergies, santé ou consignes importantes
+              <textarea name="consignes_animaux" rows="3" maxlength="700" placeholder="Traitement, comportement, interdits, vétérinaire à prévenir..."></textarea>
+            </label>
+            <label class="custom-detail" hidden>Demande particulière
+              <textarea name="details_animaux" rows="4" maxlength="900" disabled></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="service-details" data-detail-panel="Accompagnement des aînés" hidden disabled>
+            <legend>Précisions accompagnement</legend>
+            <label>Type de demande
+              <select name="prestation_seniors" data-custom-trigger>
+                <option value="" disabled selected hidden>Sélectionnez une prestation</option>
+                <option>Accompagnement aux courses</option>
+                <option>Promenade et lecture / compagnie</option>
+                <option>Aide aux démarches administratives simples</option>
+                <option>Autre / Demande particulière</option>
+              </select>
+            </label>
+            <div class="form-grid">
+              <label>Personne concernée
+                <input type="text" name="personne_concernee" maxlength="120" placeholder="Ex. parent, grand-parent, voisin...">
+              </label>
+              <label>Mobilité / déplacement
+                <input type="text" name="mobilite" maxlength="160" placeholder="Ex. marche seule, canne, besoin d'accompagnement">
+              </label>
+            </div>
+            <label>Habitudes, allergies ou points de vigilance
+              <textarea name="consignes_seniors" rows="3" maxlength="700" placeholder="Rythme, fatigue, allergies, limites, démarches prévues..."></textarea>
+            </label>
+            <label class="custom-detail" hidden>Demande particulière
+              <textarea name="details_seniors" rows="4" maxlength="900" disabled></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="service-details" data-detail-panel="Autre / Demande personnalisée" hidden disabled>
+            <legend>Demande personnalisée</legend>
+            <p class="custom-message">Expliquez uniquement ce qui sort des propositions du formulaire.</p>
+            <label>Votre demande
+              <textarea name="details_personnalises" rows="5" maxlength="1200" disabled required></textarea>
+            </label>
+          </fieldset>
+          <div class="notice strong-notice">
+            <strong>Note importante :</strong> L'envoi du formulaire ne valide pas automatiquement la prestation. Marie étudiera la demande puis la confirmera après discussion par message ou par e-mail.
+          </div>
+          <p class="privacy-note">
+            Les informations saisies servent uniquement à répondre à cette demande. Aucun compte n'est créé et le téléphone est facultatif. Un récapitulatif PDF se télécharge automatiquement après l'envoi.
+          </p>
+          <label class="checkbox-label">
+            <input type="checkbox" name="consentement" value="oui" required>
+            <span>J'accepte que ces informations soient utilisées pour répondre à ma demande.</span>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <section class="section services-preview" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p class="eyebrow">Aperçu</p>
+        <h2 id="services-title">Mes trois services principaux</h2>
+      </div>
+      <div class="preview-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <img src="imgs/baby-sitting.png" alt="">
+          </span>
+          <h3>Baby-sitting</h3>
+          <p>Garde ponctuelle, sorties d'école, aide aux devoirs et présence attentive.</p>
+          <a class="btn btn-small" href="babysitting.html">En savoir plus</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <img src="imgs/garde_animal.png" alt="">
+          </span>
+          <h3>Garde d'animaux</h3>
+          <p>Visites à domicile, promenades et compagnie pour vos compagnons familiers.</p>
+          <a class="btn btn-small" href="animaux.html">En savoir plus</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <img src="imgs/aide_senior.png" alt="">
+          </span>
+          <h3>Accompagnement des <span class="no-break">a<span class="accent-char">î</span>n<span class="accent-char">é</span>s</span></h3>
+          <p>Courses, promenade, lecture et aide aux démarches administratives simples.</p>
+          <a class="btn btn-small" href="seniors.html">En savoir plus</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feedback-section" aria-labelledby="feedback-title">
+      <div class="section-heading">
+        <p class="eyebrow">Retours</p>
+        <h2 id="feedback-title">Amélioration du site</h2>
+      </div>
+      <article class="feedback-card">
+        <h3>Retour sur le site</h3>
+        <p>
+          Pour signaler une erreur, un problème d'affichage ou proposer une amélioration, vous pouvez écrire à l'adresse technique dédiée.
+        </p>
+        <button class="btn btn-small feedback-toggle" type="button">Signaler un souci</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Marie Services. Tous droits réservés.</p>
+    <div class="footer-links">
+      <button class="footer-link-button feedback-toggle" type="button">Retour site</button>
+      <a href="cgu.html">CGU & Mentions légales</a>
+    </div>
+  </footer>
+
+  <div class="feedback-popover" role="dialog" aria-modal="true" aria-labelledby="feedback-popover-title" hidden>
+    <div class="feedback-popover-panel">
+      <button class="feedback-close" type="button" aria-label="Fermer">×</button>
+      <h2 id="feedback-popover-title">Signaler un souci</h2>
+      <p>
+        Un souci peut être une faute, un lien cassé, un problème d'affichage, une information peu claire ou une amélioration à proposer.
+      </p>
+      <label>Adresse de contact
+        <input class="feedback-email" type="text" value="retours-site@marie-services.fr" readonly>
+      </label>
+      <button class="btn btn-primary copy-feedback-email" type="button">Copier l'adresse</button>
+      <p class="copy-status" role="status" aria-live="polite" hidden></p>
+    </div>
+  </div>
+</body>
+</html>
